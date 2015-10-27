@@ -1,10 +1,11 @@
 <?php
-    require_once('ConnectDB.php');
  
     if($_SERVER["REQUEST_METHOD"] == "POST")
 	{
 		$email = $_POST['email'];
         $password = $_POST['password'];
+
+        require_once('ConnectDB.php');
  
         $sql = "select * from users where email='$email' and password='$password'";
  
